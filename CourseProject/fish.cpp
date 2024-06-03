@@ -37,6 +37,15 @@ void Fish::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
     Q_UNUSED(widget);
 }
 
+void Fish::growFish(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget, int i)
+{
+    QImage image("/home/oblachko/Projects/CourseProject/fish.jpg");
+    QRect recrangle(-30,-30,60,60);
+    painter->drawImage(recrangle, image);
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
+}
+
 void Fish::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     /* Устанавливаем позицию графического элемента

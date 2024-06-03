@@ -16,6 +16,8 @@ public:
     ~Fish();
     int *xj, *yj, *wj, *hj, x=500, y=500, w=60, h=60, points=0;;
 
+public slots:
+    void growFish(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget, int i);
 signals:
 
 private:

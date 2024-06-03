@@ -58,13 +58,16 @@ void Widget::on_pushButton_clicked()
 
 void Widget::fishes(Fishes *it)
 {
-    //for(int i=0; i<N; ++i)
+    for(int i=0; i<N; ++i)
     {
         it = new Fishes();
-     //it->setPos(0,    // Устанавливаем случайную позицию элемента
-       //        randomBetween(30,470));
-    scene->addItem(it);
-     it->move();
+        if(rand()%2==0)
+        it->setPos(0,randomBetween(30,930));
+        else
+        it->setPos(1500,randomBetween(30,930));
+
+        scene->addItem(it);
+        it->move();
     }
 }
 
